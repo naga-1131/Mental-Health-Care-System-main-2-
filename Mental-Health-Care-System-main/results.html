@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Results</title>
+  <link rel="stylesheet" href="results.css">
+</head>
+<body>
+  <h1>Your Questionnaire Results</h1>
+
+  <!-- Results will be displayed here -->
+  <p><strong>Diagnosis:</strong> <span id="diagnosis"></span></p>
+  <p><strong>Treatment:</strong> <span id="treatment"></span></p>
+  <p><strong>Recommended Therapy:</strong> <span id="therapy"></span></p>
+  <p id="no-results" style="color: red;"></p>
+
+  <div><a href="dashboard.html">Back to Dashboard</a></div>
+
+  <script>
+    window.onload = function() {
+      const result = JSON.parse(localStorage.getItem('questionnaireResult'));
+
+      if (result) {
+        document.getElementById('diagnosis').innerText = result.diagnosis;
+        document.getElementById('treatment').innerText = result.treatment;
+        document.getElementById('therapy').innerText = result.therapyRecommendation;
+        document.getElementById('no-results').style.display = 'none'; 
+      } else {
+        document.getElementById('no-results').innerText = 'No results found. Please complete the questionnaire first.';
+      }
+    };
+  </script>
+</body>
+</html>

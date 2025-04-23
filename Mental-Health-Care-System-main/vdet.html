@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <link rel="stylesheet" href="uprof.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Profile Details</h2>
+        
+        <!-- Display user details here -->
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <p id="displayFullName">Loading...</p>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <p id="displayDob">Loading...</p>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <p id="displayPhoneNumber">Loading...</p>
+        </div>
+        <div class="form-group">
+            <label for="emergencyContact">Emergency Contact Phone Number</label>
+            <p id="displayEmergencyContact">Loading...</p>
+        </div>
+        
+        <!-- Button to allow updating the profile -->
+        <div class="form-group">
+            <a href="uprof.html"><button type="button">Update Profile</button></a>
+        </div>
+
+        <!-- Back to Dashboard button -->
+        <div class="form-group">
+            <a href="dashboard.html"><button type="button">Back to Home</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Check if the user is logged out (isLoggedIn === 'false')
+        if (localStorage.getItem('isLoggedIn') === 'false') {
+            // Clear localStorage if the user is logged out
+            localStorage.clear();
+            // Redirect to the login page
+            window.location.href = "index.html"; // Replace with your actual login page
+        }
+
+        // Retrieve user details from localStorage
+        const fullName = localStorage.getItem('fullName');
+        const dob = localStorage.getItem('dob');
+        const phoneNumber = localStorage.getItem('phoneNumber');
+        const emergencyContact = localStorage.getItem('emergencyContact');
+
+        // Check if data exists in localStorage
+        if (fullName && dob && phoneNumber && emergencyContact) {
+            // Display data
+            document.getElementById('displayFullName').textContent = fullName;
+            document.getElementById('displayDob').textContent = dob;
+            document.getElementById('displayPhoneNumber').textContent = phoneNumber;
+            document.getElementById('displayEmergencyContact').textContent = emergencyContact;
+        } else {
+            // Display a message indicating no data is available
+            document.getElementById('displayFullName').textContent = 'No data available';
+            document.getElementById('displayDob').textContent = 'No data available';
+            document.getElementById('displayPhoneNumber').textContent = 'No data available';
+            document.getElementById('displayEmergencyContact').textContent = 'No data available';
+        }
+
+        // Logout button functionality
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Clear localStorage when the user logs out
+            localStorage.setItem('isLoggedIn', 'false'); // Set isLoggedIn to 'false'
+            localStorage.clear(); // Clear all session data
+
+            alert('You have logged out successfully.');
+
+            // Redirect to the login page after logout
+            window.location.href = 'index.html';  // Replace with your login page
+        });
+    </script>
+
+</body>
+</html>

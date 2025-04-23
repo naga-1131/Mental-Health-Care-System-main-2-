@@ -1,0 +1,79 @@
+/* Reset some basic elements for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5; /* Off-white background */
+    color: #2C3E50; /* Dark Slate Gray text color */
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #2C3E50; /* Dark Slate Gray */
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the Results Section */
+  p {
+    font-size: 1.2em;
+    margin: 15px 0;
+  }
+  
+  /* Styling for the Result labels */
+  strong {
+    font-weight: bold;
+    color: #2C3E50; /* Dark Slate Gray */
+  }
+  
+  /* Results will be displayed inside <span> elements */
+  #diagnosis, #treatment, #therapy {
+    color: #81C784; /* Soft Green for results */
+  }
+  
+  /* No results error message */
+  #no-results {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Back to Dashboard Link */
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 15px;
+    background-color: #81C784; /* Soft Green background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #66bb6a; /* Slightly darker green on hover */
+  }
+  
+  /* Optional: Add a border or shadow around the main result box for visual separation */
+  div {
+    background-color: #FFF9C4; /* Light Yellow background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  

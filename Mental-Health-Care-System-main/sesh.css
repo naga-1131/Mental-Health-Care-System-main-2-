@@ -1,0 +1,143 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FAFAFA; /* Very Light Gray background */
+  color: #424242; /* Dark Gray text color */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1E88E5; /* Deep Blue for heading */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #424242; /* Dark Gray text */
+  margin-top: 10px;
+}
+
+/* Form Styling */
+form {
+  background-color: #FFF3E0; /* Cream background for form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #424242; /* Dark Gray label color */
+  display: block;
+  margin-bottom: 8px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus {
+  border-color: #1E88E5; /* Accent color for focus */
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #1E88E5; /* Deep Blue for buttons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1565C0; /* Darker shade of Deep Blue on hover */
+}
+
+/* Confirmation Message */
+#confirmation-message {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #A5D6A7; /* Soft Mint Green background */
+  border-radius: 4px;
+  color: #424242; /* Dark Gray text */
+  margin-top: 20px;
+}
+
+/* Back to Dashboard Link */
+.back-to-dashboard {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-to-dashboard a {
+  font-size: 1rem;
+  color: #1E88E5; /* Deep Blue text color */
+  text-decoration: none;
+  border: 2px solid #1E88E5; /* Deep Blue border */
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-dashboard a:hover {
+  background-color: #1E88E5; /* Deep Blue background on hover */
+  color: white;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #424242;
+}
+
+footer p {
+  padding: 10px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}

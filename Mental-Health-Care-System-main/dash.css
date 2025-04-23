@@ -1,0 +1,92 @@
+/* General reset and box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body background color and text color */
+body {
+  background-color: #FFFFFF; /* White background */
+  color: #333333; /* Dark gray text */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #58A6FF; /* Soft Blue */
+  margin-top: 20px;
+}
+
+/* Paragraph below the header */
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #F2F2F2; /* Light Gray */
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #58A6FF; /* Soft Blue for links */
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #58A6FF; /* Hover effect for links */
+  color: white;
+}
+
+nav ul li button {
+  background-color: #4CAF50; /* Green Accent */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Styling for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a, nav ul li button {
+    font-size: 1rem;
+  }
+}

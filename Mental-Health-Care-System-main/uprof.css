@@ -1,0 +1,101 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f7fc; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container styling for the form */
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4a90e2; /* Light blue color */
+    margin-bottom: 20px;
+}
+
+/* Form Group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #c0e4fc; /* Light blue border */
+    border-radius: 8px;
+    background-color: #f7fbff; /* Very light blue background for inputs */
+    color: #333;
+}
+
+/* Focused input field */
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2; /* Darker blue border when focused */
+    background-color: #e3f5ff; /* Slightly darker blue background when focused */
+}
+
+/* Button styling */
+.form-group button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a90e2; /* Light blue button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.form-group button:hover {
+    background-color: #3b7ab8; /* Darker blue when hovered */
+}
+
+/* Optional additional styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form a {
+    text-align: center;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+form a:hover {
+    text-decoration: underline;
+}

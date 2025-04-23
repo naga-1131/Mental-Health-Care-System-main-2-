@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Booking</title>
+  <link rel="stylesheet" href="sesh.css">
+</head>
+<body>
+  <header>
+    <h1>Book a Therapy Session</h1>
+    <p>Fill out the form below to book your session.</p>
+  </header>
+  
+  <main>
+    <form id="session-booking-form">
+      <!-- Therapy Type -->
+      <div>
+        <label for="therapy-type">Select Therapy Type:</label>
+        <select id="therapy-type" name="therapy-type" required>
+          <option value="" disabled selected>Select therapy</option>
+          <option value="cognitive">Cognitive Behavioral Therapy</option>
+          <option value="psychodynamic">Psychodynamic Therapy</option>
+          <option value="group">Group Therapy</option>
+          <option value="family">Family Therapy</option>
+          <option value="art">Art Therapy</option>
+        </select>
+      </div>
+
+      <!-- Date -->
+      <div>
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <!-- Time -->
+      <div>
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Book Session</button>
+    </form>
+
+    <div id="confirmation-message" style="display: none; color: green; margin-top: 20px;">
+      Your session has been successfully booked! Redirecting to dashboard...
+    </div>
+
+    <div class="back-to-dashboard" style="margin-top: 20px;">
+      <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Your Mental Health Portal</p>
+  </footer>
+
+  <script>
+    document.getElementById('session-booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Show confirmation message
+      const confirmationMessage = document.getElementById('confirmation-message');
+      confirmationMessage.style.display = 'block';
+
+      // Hide the form
+      document.getElementById('session-booking-form').style.display = 'none';
+
+      // Wait 3 seconds, then redirect to dashboard
+      setTimeout(function() {
+        window.location.href = 'dashboard.html';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

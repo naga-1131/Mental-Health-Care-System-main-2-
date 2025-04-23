@@ -1,0 +1,157 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF; /* White background */
+  color: #333333; /* Dark Charcoal text */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question label {
+  font-weight: bold;
+  color: #333333;
+  font-size: 1rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* For Safari and Chrome */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* Universal */
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+input[type="range"]:hover {
+  background: #c8a2d6; /* Soft Lavender on hover */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FF6F61; /* Coral */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: #FF6F61; /* Coral on focus */
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background: #FF6F61; /* Coral on active */
+}
+
+span {
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+#q1-value,
+#q2-value,
+#q3-value,
+#q4-value,
+#q5-value,
+#q6-value,
+#q7-value,
+#q8-value,
+#q9-value,
+#q10-value,
+#q11-value,
+#q12-value,
+#q13-value,
+#q14-value,
+#q15-value {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #FF6F61; /* Coral */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #FF4F3A; /* Slightly darker Coral on hover */
+}
+
+button:focus {
+  outline: 2px solid #C8A2D6; /* Soft Lavender outline */
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #ADD8E6; /* Light Blue */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  form {
+    padding: 10px;
+  }
+
+  .question {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
